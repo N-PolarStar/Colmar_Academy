@@ -68,8 +68,6 @@ p {
 image-box {
     display: flex;
 }
-/* Banner No.2 */
-
 /* header */
 
 header {
@@ -102,8 +100,36 @@ header span {
 strong#black {
     color: hsla(0, 0%, 0%, 1)
 }
-a {
+nav a {
     text-decoration: none;
+}
+header div.mobile {
+    display: none;
+}
+/*media query*/
+@media only screen and (max-width: 760px) {
+    header div.desktop {
+        display: none;
+    }
+    header div.mobile {
+        display: block;
+        width: 100%;
+    }
+    header .mobile ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+    header .mobile li {
+        padding: 0;
+        overflow: hidden;
+    }
+    header .mobile li img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
 }
 
 /* banner no.1 */
@@ -138,7 +164,27 @@ a.button:hover {
     text-align: center;
     padding: 0.5rem 0;
 }
-
+/* media query*/
+@media only screen and (max-width: 770px) {
+    section.ban1 {
+        flex-direction: column;
+        padding: 0;
+    }
+    section.ban1 .main-content {
+        width: 100%;
+        padding: 0;
+    }
+    section.ban1 img {
+        height: auto;
+    }
+    section.ban1 .side-content {
+        width: auto;
+        padding: 2rem 1rem;
+    }
+    section.ban1 .side-content p.subhead {
+        padding-bottom: 1.5rem;
+    }
+}
 
 /* banner No.2 */
 .ban2 h3 {
@@ -176,6 +222,54 @@ a.button:hover {
 .sub-side-box p {
     padding-bottom: 0.5rem;
 }
+.text-container a {
+    color: hsla( 206, 90%, 60%, 1)
+}
+.sub-side-box .mobile {
+    display: none;
+  }
+
+/*media query banner 2*/
+@media only screen and (max-width: 800px) {
+    section.ban2 {
+        padding: 0;
+    }
+    section.ban2 div.main-content {
+        display: none;
+    }
+    section.ban2 div.side-content {
+        width: 100%;
+        padding: 1rem 1rem 0 1rem;
+        border-bottom: 1px solid hsla(25, 10%, 75%, 1);
+    }
+    section.ban2 div.side-content img.desktop {
+        display: none;
+    }
+    section.ban2 div.side-content .media-container {
+        width: 100%;
+        padding-bottom: 1.5rem;
+    }
+    section.ban2 div.side-content .text-container {
+        width: auto;
+        padding: 0 1rem 0 1rem;
+    }
+    section.ban2 div.side-content img.mobile {
+        display: block;
+        height: auto;
+    }
+    section.ban2 div.side-content .sub-side-box {
+        flex-direction: column;
+        padding: 0 0 2rem 0;
+    }   
+    section.ban2 .sub-side-box:last-child {
+        border-bottom: none;
+        background-color: hsla(0, 0%, 100%, 1);
+    }
+    section.ban2 .sub-side-box p {
+        padding-bottom: 0.5rem;
+    }
+ 
+}
 /* Learning ban3 */
 section.ban3 {
     background-color: hsla(25, 10%, 90%, 0.5);
@@ -211,6 +305,29 @@ p.subhead {
     padding-bottom: 0.5rem;
     color: hsla(25, 0%, 35%, 1);
 }
+/*media query*/
+@media only screen and (max-width: 770px) {
+    body section.ban3 {
+        background-color: inherit;
+    }
+    section.ban3 div.courses {
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px solid hsla(25, 10%, 75%, 1);
+    }
+    section.ban3 div.courses .box {
+        margin: .25rem 0;
+        background-color: hsla(42, 10%, 81%, 0.8);
+    }
+section.ban3 p.subhead {
+    padding-bottom: 0.5rem;
+    color: hsla(25, 25%, 20%, 1);
+}
+    section.ban3 .media-container, section.ban3 p.faded {
+        display: none;
+    }
+
+}
 /* Thesis ban4 */
 .title.ban4 h3{
     padding-bottom: 0;
@@ -229,6 +346,25 @@ p.subhead {
 .main-content p.quote {
    color: hsla(0, 0%, 20%, 1);
 }
+/*media query*/
+@media only screen and (max-width: 770px) {
+    section.ban4.flex {
+        padding: 0;
+    }
+    section.ban4 .media-container {
+        width: 100%;
+    }
+    section.ban4 .media-container video{
+        
+    }
+    section.ban4 .main-content {
+        width: 100%;
+        padding: 1rem 0 1.5rem 0;
+    }
+    section.ban4 .main-content h3, section.ban4 .main-content p.quote, section.ban4 .side-content {
+        display: none;
+    }
+}
 /* footer*/
 footer {
     display: flex;
@@ -246,4 +382,17 @@ footer ul li:last-child {
 }
 footer p {
     font-size: small;
+}
+
+/*media query*/
+
+@media only screen and (max-width: 600px) {
+    footer {
+        border-top: none;
+        padding: 1rem;
+    }
+    footer ul li {
+        display: none;
+    }
+
 }
